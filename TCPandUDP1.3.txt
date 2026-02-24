@@ -1,0 +1,146 @@
+Question:
+TCP and UDP are okay, but then what are those extra stuffs like HTTP,FTP and HTTPS where these guys comes into play?
+
+    TCP/UDP move data.
+    HTTP / HTTPS / FTP define what that data means.
+
+Where TCP/UDP and HTTP/FTP/HTTPS actually sit
+    Think of networking like this:
+            Your App (Browser / Client)
+            ↓
+            HTTP / HTTPS / FTP   ← Application Layer
+            ↓
+            TCP or UDP           ← Transport Layer
+            ↓
+            IP                   ← Internet Layer
+            ↓
+            Physical Network (cables, wifi, fiber)
+
+    TCP / UDP
+        HOW data moves
+    HTTP / HTTPS / FTP
+        WHAT the data represents
+
+Analogy (real life)
+    Imagine sending a package:
+    IP
+      = Address on the box
+    TCP / UDP
+      = Delivery service (safe courier vs fast courier)
+    HTTP / FTP
+      = Type of package + rules inside
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
