@@ -1,0 +1,270 @@
+Prerequisite: 1.1
+
+Question:
+But even in UDP if that makes many packets to be lost then that will also unacceptable right?
+And also explain about the three way handshaking protocol.
+
+
+
+
+======================================================================================================================================================================================================
+But even in UDP if that makes many packets to be lost then that will also unacceptable right?  
+  UDP can become unacceptable if too many packets are lost.
+  But here’s the key idea:
+      UDP doesn’t guarantee delivery — the application decides what to do about loss.
+  Let’s unpack this carefully.
+
+If UDP loses too many packets, why is it still used?
+    First truth
+      UDP itself provides:
+           No retransmission
+           No ordering
+           No reliability
+      So if 40% packets vanish — UDP doesn’t care.
+      
+But modern applications DO care.
+    They build their own intelligence on top of UDP.
+    This is the most important concept.
+
+Example: Video streaming / calls
+    Imagine Zoom / YouTube / Netflix:
+    If 1–2 packets drop → video slightly blurs.
+    If many packets drop:
+        App automatically:
+            Lowers video quality
+            Reduces resolution
+            Adds buffering
+            Changes bitrate
+        They adapt, instead of retransmitting everything.
+        Waiting would destroy real-time experience.
+
+Example: Online games
+      If one position update is lost:
+        No problem — next frame replaces it.
+      But if packet loss becomes high:
+        Characters teleport
+        Lag increases
+        Eventually disconnected
+      Game servers monitor packet loss and kick clients if unstable.
+
+Important modern trick
+      Many big platforms use UDP + custom reliability layer
+      For example:
+          Google uses QUIC
+          Netflix
+          Meta Platforms
+      They use QUIC (runs over UDP) which adds:
+          Packet recovery
+          Congestion control
+          Encryption
+      So:
+          UDP gives speed
+          QUIC adds smart reliability
+        Best of both worlds.
+
+So your question:
+    “If UDP loses many packets, isn’t that unacceptable?”
+    Answer:
+        YES.
+    If packet loss becomes high:
+        Video freezes
+        Calls drop
+        Games disconnect
+    At that point:
+        Application stops session
+        Network switches route
+        Or user reconnects
+    UDP doesn’t hide failure — it exposes it fast.
+    TCP hides failure by retrying.
+
+    Core difference:
+      TCP philosophy:
+          “Deliver everything correctly, even if it takes time.”
+      UDP philosophy:
+          “Deliver whatever arrives right now.”
+
+Real engineering rule
+      Use:
+        TCP when:
+          Data must be perfect
+          Banking
+          APIs
+          Files
+        UDP when:
+          Data must be fast
+          Live audio/video
+          Games
+          Real-time systems
+
+UDP accepts loss to preserve real-time behavior, while TCP accepts delay to preserve correctness.
+====================================================================================================================================================================================================
+
+So we need to do some extra engineering to make the video streamings looks like to be fully visible?
+
+    Yes, video streaming only looks smooth because engineers add extra logic on top of UDP (or sometimes TCP). The network itself doesn’t magically guarantee quality.
+
+Part 1 — Do engineers add “extra engineering” for smooth video?
+    Yes — 100%. Without this, video calls and streams would be terrible.
+    Core idea
+      UDP just throws packets.
+      So apps like Netflix, Google (YouTube), and Zoom Video Communications build smart systems on top.
+      They implement:
+          1. Adaptive Bitrate Streaming
+            If your internet slows:
+              1080p → 720p → 480p automatically
+            They don’t wait for lost packets.
+            They reduce quality in real time.
+            That’s why sometimes video suddenly becomes blurry.
+            
+          2. Buffering
+            They keep a few seconds of video stored ahead.
+            So small packet losses don’t immediately freeze playback.
+
+          3. Forward Error Correction (FEC)
+            They send extra recovery packets.
+            If 1–2 packets are lost → reconstructed without retransmission.
+
+          4. Custom reliability over UDP (QUIC)
+              Modern systems use QUIC (built over UDP) which adds:
+                  Selective packet recovery
+                  Congestion control
+                  Encryption
+              So:
+                  UDP gives speed
+                  QUIC adds intelligence
+              Best combination.
+
+          UDP alone is dumb.
+          Streaming quality comes from application-level engineering.
+
+
+====================================================================================================================================================================================================
+
+And also explain about the three way handshaking protocol.
+      This is how TCP creates a reliable connection before sending data.
+
+      Step 1 — Client → Server : SYN
+        Your browser says:
+          “Hi server, can we talk?”
+        This packet is called SYN.
+
+      Step 2 — Server → Client : SYN + ACK
+        Server replies:
+          “Yes — I’m ready. I heard you.”
+        This is SYN-ACK.
+
+      Step 3 — Client → Server : ACK
+        Client confirms:
+          “Great — let’s start.”
+        This is ACK.
+
+      Connection established.
+          Only after this:
+              Web pages load
+              APIs run
+              Files download
+
+In simple human terms:
+      Client: Are you there?
+      Server: Yes, I am. Are YOU there?
+      Client: Yes. Let's talk.
+  That’s it.
+
+Why TCP needs this?
+    Because TCP must:
+      Ensure both sides exist
+      Synchronize packet numbers
+      Prepare buffers
+      Start reliability tracking
+    UDP skips all this — that’s why it’s faster.
+
+Deep engineering difference
+    TCP:
+        Handshake → then data
+        (reliable but slow startup)
+    UDP:
+        Data immediately
+        (fast but risky)
+
+TCP uses a three-way handshake to establish a reliable connection, while UDP sends data without any connection setup.
+
+Final mental model
+      Video streaming:
+          UDP (fast)
+          + buffering
+          + adaptive quality
+          + FEC
+          + QUIC
+          = smooth experience
+
+      Web / APIs:
+          TCP
+          + handshake
+          + retransmission
+          = perfect data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
