@@ -1,0 +1,332 @@
+Questions:
+History Of Internet
+Can you define this like how the exact history happened? From the cold war tension and how initially it was built? And how it was developed gradually over the days?
+Whats TCP/IP here?
+And what was before TCP and IP?
+What is the difference between TCP and UDP?
+=============================================================================================================================================================================================
+
+History Of Internet
+
+1960s – The Idea Begins
+  During the Cold War, researchers in the US wanted a communication system that wouldn’t fail if one part broke.
+  This led to ARPANET (1969), the first computer network.
+
+1970s–1980s – Networks Learn to Talk
+  Different networks were connected using TCP/IP (the Internet’s basic rules).
+  In 1983, ARPANET officially switched to TCP/IP — this date is often called the birth of the modern Internet.
+
+1991 – World Wide Web is Born
+  Tim Berners-Lee created the World Wide Web at CERN(The European Organization for Nuclear Research (CERN)).
+  He introduced:
+      Web pages
+      URLs
+      Browsers
+  This made the Internet usable for normal people, not just scientists.
+
+1990s–2000s – Public Explosion
+  Email, websites, search engines, and online businesses appeared.
+  Companies like Google, Amazon, and Yahoo grew rapidly.
+  Home Internet became common.
+
+2010s–Now – Internet Everywhere
+  Smartphones, social media, cloud computing, AI, streaming.
+  Platforms like Facebook, YouTube, and Netflix changed daily life.
+  Today, the Internet connects billions of people and devices globally.
+
+The Internet started as a military research network and evolved into a global system that connects the entire world.
+=============================================================================================================================================================================================
+
+Can you define this like how the exact history happened? From the cold war tension and how initially it was built? And how it was developed gradually over the days?
+
+Phase 1: Cold War Tension (1950s–1960s)
+    The problem
+        After World War II, the US and USSR entered the Cold War.
+        The US military had a serious fear:
+            What if a nuclear attack destroys our central communication system?
+        At that time:
+            Communication networks were centralized
+            If the main center failed → everything failed
+        So the US wanted a network that:
+            Has no single central control
+            Still works even if parts are destroyed
+
+The solution idea: Distributed networking
+      US research agency DARPA(Defense Advanced Research Projects Agency) funded scientists to design a decentralized computer network.
+      Instead of sending data as one big block, they invented:
+            Packet Switching(Data broken into small packets, each finding its own path.)
+      This was revolutionary.
+
+1969 – Birth of ARPANET
+      DARPA built ARPANET.
+      First 4 connected universities:
+        UCLA
+        Stanford
+        UC Santa Barbara
+        University of Utah
+      The very first message was supposed to be LOGIN.
+      System crashed after “LO” 😄
+      That’s literally how the Internet began.
+
+Phase 2: Making Networks Speak Together (1970s–1980s)
+  Now ARPANET(Advanced Research Projects Agency Network) worked — but another problem appeared:
+  Different networks couldn’t communicate.
+  So two scientists:
+      Vint Cerf
+      Bob Kahn
+  created TCP/IP — the universal language of networks.
+  1983 — Big turning point
+      ARPANET officially switched to TCP/IP.
+      This moment is considered:
+           The birth of the modern Internet
+      Now:
+          Universities joined
+          Research labs joined
+          International networks joined
+      Email became popular among scientists.
+      Still: only researchers used it.
+      No public websites yet.
+
+Phase 3: World Wide Web (1991)
+  Internet existed…
+  But it was text-based, technical, hard to use.
+  Then one man changed everything:
+  Tim Berners-Lee
+      Working at CERN, he invented:
+        HTML
+        URLs
+        Web browser
+        Web server
+      He called it:
+        World Wide Web
+      Important:
+        He made it FREE for everyone.
+      This allowed:
+        Websites
+        Clicking links
+        Images
+        Normal people to use Internet
+
+Phase 4: Public Explosion (1990s–2000s)
+  Now Internet moved from labs → homes.
+  Companies appeared:
+    Google
+    Amazon
+    Yahoo
+  People started using:
+    Email
+    Search engines
+    Online shopping
+    Chat rooms
+  Dial-up modems → broadband.
+  Internet became commercial + global.
+
+Phase 5: Modern Internet (2010s–Now)
+    Now we have:
+      Smartphones
+      Cloud computing
+      AI
+      Streaming
+      Social media
+    Platforms like:
+      Facebook
+      YouTube
+      Netflix
+    Internet is no longer “technology”.
+    It is human infrastructure.
+
+Cold War fear
+      ↓
+Military research (DARPA)
+      ↓
+ARPANET (1969)
+      ↓
+TCP/IP (1983)
+      ↓
+World Wide Web (1991)
+      ↓
+Public Internet (1990s)
+      ↓
+Mobile + Cloud + AI (Today)
+
+The Internet was NOT built for business or social media.
+It was built to survive war.
+Everything else came later.
+
+==========================================================================================================================================================================
+Whats TCP/IP here?
+And what was before TCP and IP?
+
+
+First: What exactly is TCP/IP?
+    TCP/IP is a pair of protocols that tell computers how to send data across networks.
+    It was designed by:
+        Vint Cerf
+        Bob Kahn
+    And became official on ARPANET in 1983.
+
+    TCP = Transmission Control Protocol
+    Responsible for:
+        Breaking data into packets
+        Making sure nothing is lost
+        Re-sending missing packets
+        Putting packets back in correct order
+    Think: “Did everything arrive safely?”
+
+    IP = Internet Protocol
+    Responsible for:
+        Giving each computer an address (IP address)
+        Deciding where packets should go
+        Routing packets across routers
+    Think: “Where should this packet travel?”
+
+In simple words:
+      IP finds the destination.
+      TCP guarantees safe delivery.
+    Together = TCP/IP.
+    This combo is why the Internet actually works reliably.
+
+Now the important part:
+    What was BEFORE TCP/IP?  
+        Answer: NCP (Network Control Protocol)
+        Early ARPANET (1970s) used NCP.
+
+Problems with NCP
+    NCP could:
+         Communicate inside ARPANET
+         But it could NOT:
+             Connect different networks
+             Scale globally
+             Handle packet loss properly
+             Support international expansion
+          It assumed:
+              “Everyone is on the same network.”
+            That became a big limitation.
+
+The Big Realization (late 1970s)
+      Researchers wanted to connect:
+          Military networks
+          University networks
+          Satellite networks
+          Radio networks
+      NCP completely failed here.
+      So Cerf & Kahn created TCP/IP with a revolutionary idea:
+          Any network → any technology → same protocol.
+      This is called:
+          Internetworking
+      (That’s literally where the word Internet comes from.)
+
+1983 — The Historic Switch
+      ARPANET officially dropped NCP and adopted TCP/IP.
+      This moment is considered:
+          The birth of the modern Internet
+      After that:
+          Universities joined
+          Countries joined
+          Commercial networks joined
+      Boom → global Internet.
+
+Simple timeline
+1969 – ARPANET created
+        ↓
+1970s – Uses NCP (limited)
+        ↓
+Problems appear (can't scale)
+        ↓
+TCP/IP invented
+        ↓    
+1983 – ARPANET switches to TCP/IP
+        ↓
+Internet becomes possible
+
+
+“NCP worked only inside ARPANET.
+TCP/IP enabled multiple independent networks to interconnect — creating the Internet.”
+=========================================================================================================================================================================================================================================================
+What is the difference between TCP and UDP?
+
+    TCP (Transmission Control Protocol) → Reliable, ordered, slow but safe
+    UDP (User Datagram Protocol) → Fast, lightweight, but no guarantees
+    TCP = Registered post (with tracking)
+    UDP = Normal post (just throw and go)
+
+TCP (Transmission Control Protocol)
+      What TCP does:
+          Establishes connection first (3-way handshake)
+          Sends data in order
+          Detects lost packets
+          Retransmits missing data
+          Guarantees delivery
+      Result:
+          Slower
+          More overhead
+          Extremely reliable
+      Used when correctness matters:
+          Websites (HTTP/HTTPS)
+          Email
+          File downloads
+          APIs
+          Banking systems
+      Example:
+          If you download a PDF — even 1 missing byte is unacceptable → TCP.
+
+UDP (User Datagram Protocol)
+    What UDP does:
+      No connection setup
+      No delivery guarantee
+      No reordering
+      No retransmission
+    Just:
+      Send → forget.
+    Result:
+      Very fast
+      Very low overhead
+      Can lose data
+    Used when speed matters more than perfection:
+      Video streaming
+      Online games
+      Voice calls
+      Live broadcasts
+    Example:
+      In a video call, losing 1 frame is okay — waiting for it is not → UDP.
+
+| Feature        | TCP              | UDP                 |
+| -------------- | ---------------- | ------------------- |
+| Connection     | Yes              | No                  |
+| Reliability    | Guaranteed       | Not guaranteed      |
+| Order          | Maintained       | Not maintained      |
+| Speed          | Slower           | Faster              |
+| Retransmission | Yes              | No                  |
+| Overhead       | High             | Low                 |
+| Typical use    | Web, APIs, Files | Games, Video, Voice |
+
+What is overhead?
+    Networking overhead is the additional information, processing, or time required by protocols and systems to successfully deliver data over a network, beyond the actual payload.
+
+Real-world analogy (easy to remember)
+  TCP:
+    Teacher sending exam papers and waiting for acknowledgment from every student.
+  UDP:
+    Announcer speaking on loudspeaker — whoever hears it, hears it.
+
+TCP prioritizes reliability; UDP prioritizes speed.
+
+Important practical mapping:
+    REST APIs → TCP
+    Database connections → TCP
+    Video streaming → UDP
+    Multiplayer games → UDP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
