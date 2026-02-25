@@ -1,0 +1,56 @@
+Unit-1
+Introduction to the Internet:
+Internet Network edge: Access networks 
+Physical media 
+Network core: Packet switching 
+Circuit switching 
+Network of networks
+Delay, loss and throughput in packet-switched networks
+Protocol layers and their service models.
+
+==========================================================================================================================================================================================================================================
+Unit - II
+Application Layer:
+
+Principles of Network applications 
+The web and HTTP 
+Electronic mail in the internet
+DNS-Internet's directory service
+Peer-to-Peer File Distribution
+Video Streaming and Content Distribution Networks
+Socket programming: Creating Network applications
+
+=============================================================================================================================================================================================================
+Unit - III
+Transport Layer:
+
+Introduction and transport layer services
+Multiplexing and Demultiplexing
+Connectionless transport: UDP
+Principles of reliable data transfer: Reliable Data Transfer over a Lossy Channel with Bit Errors: rdt3.0
+Go-Back-N 
+Selective Repeat 
+Connection-oriented transport: TCPTCP congestion control
+
+===============================================================================================================================================================================
+Unit - IV
+Network Layer:
+
+Overview
+Inside a router
+Internet Protocol (IP): IPv4, Addressing, IPv6 
+Generalized forwarding and SDN 
+Routing algorithms: Link-State and Distance-Vector 
+Intra-AS routing in the Internet: OSPF - ICMP
+
+===================================================================================================================================================================================
+Unit - V
+Link Layer and LAN:
+
+Introduction to Link layer 
+Error detection and correction techniques
+Multiple access links and protocols
+Switched LAN 
+Security in Computer Networks: 
+  Principles of Network Security 
+  Principles of Cryptography: Symmetric Key Cryptography, Public Key Encryption
